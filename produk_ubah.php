@@ -1,4 +1,5 @@
 <?php
+
 $id = $_GET['id'];
 if (isset($_POST['nama_produk'])) {
     $nama = $_POST['nama_produk'];
@@ -60,7 +61,7 @@ $data = mysqli_fetch_array($query);
                 <td></td>
                 <td>
                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                        <button type="submit" class="btn btn-dark w-100">Login</a>
+                        <button type="submit" class="btn btn-dark w-100">Ubah</a>
                     </div>
                 </td>
             </tr>

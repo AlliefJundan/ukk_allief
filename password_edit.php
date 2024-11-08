@@ -1,4 +1,5 @@
 <?php
+
 $id = $_GET['id'];
     if (isset($_POST['password'])) {
         $password = $_POST['password'];

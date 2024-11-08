@@ -1,4 +1,5 @@
 <?php
+
 cek_level();
 
 $id = $_GET['id'];

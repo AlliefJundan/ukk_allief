@@ -1,4 +1,7 @@
+
 <?php
+
+
 $id = $_SESSION['user']['id_user'];
     if (isset($_POST['password'])) {
         $password = $_POST['password'];

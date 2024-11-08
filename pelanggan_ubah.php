@@ -1,4 +1,5 @@
 <?php
+
 $id = $_GET['id'];
 if (isset($_POST['nama_pelanggan'])) {
     $nama = $_POST['nama_pelanggan'];

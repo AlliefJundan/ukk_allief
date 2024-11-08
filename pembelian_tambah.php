@@ -1,4 +1,8 @@
 <?php
+
+if(isset($_SESSION['level']) && $_SESSION['level'] == 'admin') {
+    header('location:?page=pembelian');
+}
 if (isset($_POST["id_pelanggan"]) && $_POST["id_pelanggan"] != "") {
 
     $id_pelanggan = $_POST['id_pelanggan'];
@@ -38,7 +42,8 @@ if (isset($_POST["id_pelanggan"]) && $_POST["id_pelanggan"] != "") {
     if ($query) {
         echo '<script>location.href="?page=pembelian"; alert("Tambah data berhasil");</script>';
     } else {
-        echo '<script>alert("Tambah data gagal");</script>';
+        echo '<script>alert("Tambah data gagal"); location.href:"?page=pembelian_tambah"</script>';
+    
     }
 }
 

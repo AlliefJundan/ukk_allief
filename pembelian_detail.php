@@ -1,4 +1,5 @@
 <?php
+
 // Ambil id_penjualan dari URL atau request
 $id_penjualan = $_GET['id'];
 
@@ -31,8 +32,10 @@ $total_harga = $info['total_harga'];
     <br>
     <br>
     <a href="?page=pembelian" class="btn btn-dark text-light">Kembali</a>
+    <?php if($_SESSION['level'] != 'admin') { ?>
     <a href="cetak_struk.php?id=<?php echo $id_penjualan; ?>" target="_blank" class="btn btn-success text-light">Cetak
         Struk</a>
+        <?php }?>
     <hr>
     <p><strong>Waktu Pembelian:</strong> <?php echo $tanggal_penjualan; ?></p>
     <p><strong>Nama Pelanggan:</strong> <?php echo $nama_pelanggan; ?></p>

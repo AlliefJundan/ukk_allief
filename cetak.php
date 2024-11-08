@@ -1,8 +1,9 @@
 <?php
-if($_SESSION    ["level"] !== "admin") {
+include("koneksi.php");
+if($_SESSION ["level"] !== "admin") {
     header("location=?page=home");
 }
-include("koneksi.php");
+cek_login();
 
 // Ambil rentang waktu dari parameter GET
 $rentang_waktu = isset($_GET['rentang_waktu']) ? (int)$_GET['rentang_waktu'] : 1;

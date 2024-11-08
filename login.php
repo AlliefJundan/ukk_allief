@@ -1,7 +1,8 @@
 <?php
 include "koneksi.php";
+session_start();
 if(isset($_SESSION['user'])) {
-    header(header: 'location:index.php');
+    header(header: 'location:login.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

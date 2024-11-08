@@ -1,9 +1,12 @@
+
 <div class="container-fluid px-4">
     <h1 class="mt-4">Pembelian</h1>
     <br>
     <br>
+    <?php if($_SESSION['level'] != 'admin') { ?>
     <a href="?page=pembelian_tambah" class="btn btn-dark text-light"><i class="fa-solid fa-cart-shopping"></i> Tambah
         Data</a>
+        <?php } ?>
     <?php if ($_SESSION['level'] == 'admin') { ?>
         <form action="cetak.php" method="GET" target="_blank" class="d-inline">
             <button type="submit" class="btn btn-success text-light"><i class="fa-solid fa-print"></i>Cetak Laporan</button>

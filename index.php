@@ -1,7 +1,6 @@
 <?php
 include "koneksi.php";
-cek_level();
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']) || $_SESSION['level'] != 'admin') {
     header(header: 'location:login.php');
 
 }
